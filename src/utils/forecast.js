@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find loction information.', undefined)
         } else {
             callback(undefined, 
-                body.daily.data[0].summary + "It is currently " + body.currently.temperature + ". There is a " + body.currently.precipProbability + "% chance of rain.")
+                "현재 : " + body.daily.data[0].summary + ", 기온은 " + body.currently.temperature + "도이며, 현재 강수 확률은" + body.currently.precipProbability + "% 입니다.")
         }
     })
 }
